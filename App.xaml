@@ -1,0 +1,71 @@
+﻿<Application
+    x:Class="RaceManagerHub.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:RaceManagerHub"
+    StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Config/Colors.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--  Add Style  -->
+            
+            <!-- Tab Bar Icon Button-->
+            <Style x:Key="Tab_Icon_Button" TargetType="Button">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Foreground" Value="{StaticResource Silver_Clr}" />
+                <Setter Property="Width" Value="40" />
+                <Setter Property="Height" Value="35" />
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter Width="15" Height="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{StaticResource Gray_Clr}" />
+                        <Setter Property="Foreground" Value="{StaticResource Jet_Clr}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <!-- Left Bar Icon Button-->
+            <Style x:Key="Menu_Icon_Button" TargetType="Button">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Foreground" Value="{StaticResource Silver_Clr}" />
+                <Setter Property="Width" Value="50" />
+                <Setter Property="Height" Value="50" />
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter Width="35" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{StaticResource Gray_Clr}" />
+                        <Setter Property="Foreground" Value="{StaticResource Jet_Clr}" />
+                    </Trigger>
+                    <Trigger Property="IsMouseCaptured" Value="True">
+                        <Setter Property="Background" Value="{StaticResource Gray_Clr}" />
+                        <Setter Property="Foreground" Value="{StaticResource Jet_Clr}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
